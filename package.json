@@ -6,8 +6,8 @@
   "scripts": {
     
     "create-database": "createdb project5",
-    "create-table": "psql -h localhost -d project5 -f sql/create_tables.sql",
-    "seed-table": "psql -h localhost -d project5 -f sql/seed_tables.sql",
+    "create-table": "psql -U postgres -h localhost -d project5 -f sql/create_tables.sql",
+    "seed-table": "psql -U postgres -h localhost -d project5 -f sql/seed_tables.sql",
     "dev": "nodemon -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"

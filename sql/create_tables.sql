@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
   first_name VARCHAR(255) NOT NULL,
   surname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  passwords VARCHAR(64) NOT NULL
+  passwords CHAR(8) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS ratings (
