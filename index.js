@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const session = require('express-session')
-
+const path = require('path')
 //initialise database connection as db
 const db = require('./database')
 const port = process.env.PORT || 3000
@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 //set view engine
 app.set('view engine', 'ejs')
 app.set('views', './views')
-app.use('/public', express.static('public'))
+app.use('', express.static(path.join(__dirname, 'public')))
 
 //syntax highlighting
 const morgan = require('morgan')
@@ -55,6 +55,9 @@ app.use('/homepage', homepageRouter)
 
 const signupRouter=require('./routes/signup')
 app.use('/signup', signupRouter)
+
+const ratingRouter = require('./routes/rating')
+app.use('/rating', ratingRouter)
 
 const errorRouter=require('./routes/404')
 app.use('*', errorRouter)

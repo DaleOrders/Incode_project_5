@@ -1,0 +1,106 @@
+
+   <!--  <div class="rating">
+        <span class="rating__result"></span> 
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+  </div> -->
+  <script src="/res/rating.js"></script>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Moives</th>
+        <th>Rating</th>
+        <th></th>
+        <th>comunity rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Movies 1</td>
+        <td>
+            <div class="rating">
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+          </div>
+        </td>
+        <td><form method="POST" action="/rating">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Rate this movie</button>
+
+          </form>
+        </td>
+        <td><%= rating[0].avgrating %></td>
+      </tr>
+      <tr>
+        <td>Movies 2</td>
+        <td>
+            <div class="rating">
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+          </div>
+        </td>
+        <td><form method="POST" action="/rating">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Rate this movie</button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>Movies 3</td>
+        <td>
+            <div class="rating">
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+          </div>
+        </td>
+        <td><form method="POST" action="/rating">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Rate this movie</button>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>Movies 4</td>
+        <td>
+            <div class="rating">
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+          </div>
+        </td>
+        <td><form method="POST" action="/rating">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Rate this movie</button>
+          </form>
+        </td>
+      </tr>
+      <tr >
+        <td>Movies 5</td>
+        <td>
+            <div class="rating">
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+                <i class="rating__star far fa-star"></i>
+          </div>
+        </td>
+        <td><form method="POST" action="/rating">
+            <button type="submit" class="btn btn-outline-danger btn-sm">Rate this movie</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
