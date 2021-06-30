@@ -1,1 +1,1 @@
-CREATE DATABASE project5
+CREATE DATABASE project5;
