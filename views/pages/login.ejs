@@ -1,24 +1,24 @@
 <!-- login page -->
-
-<section id="form_container">
-    <h1>LOGIN </h1>
+<div class ="bg-img">
+<img id="bg" src="/poster.jpg" >
+    <div class="form_container">
     <form action="/login" method="POST">
         <div id="err-message">
             <% if(message) { %>
                 <p>* <%= message %></p>
             <% } %>
         </div>
-        <div>
-            <label for="email">Email: </label>
-            <input id="email" name="email" type="email">
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input id="password" name="password" type="password">
-        </div>
-        <div class="sub-button">
+            <div id ="signin">
+            <img id="loginlogo" src="/Blue Photo Movie Ticket.png" alt="Movie buff logo" >
+            <input id="email" name="email" type="email" placeholder="Enter Email">    
+            <input id="password" name="password" type="password" placeholder="Enter Password">
+            </div>
+            <div class="sub-button">
             <button id="submit" type="submit">Login</button>
-        </div>
-        <h5><a href="/signup" class="signup" >Sign up</a></h5>
+                <div id="signup">
+               <p>Don't have an account?<a href="/signup" class="signup" >Sign up!</a></p>
+                 </div>
+            </div> 
     </form>
-</section>
+    </div>
+</div>
