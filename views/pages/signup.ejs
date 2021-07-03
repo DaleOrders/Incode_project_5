@@ -3,11 +3,6 @@
     <img id="bg" src="/poster.jpg" >
 <div class="form_container">
     <form action="/signup" method="POST">
-        <div id="err-message">
-            <% if(message) { %>
-                <p>* <%= message %></p>
-            <% } %>
-        </div>
         <div id ="signin">
         <img id="loginlogo" src="/Blue Photo Movie Ticket.png" alt="Movie buff logo" >
         <h2>Join Movie Buff</h2>
@@ -22,6 +17,11 @@
             <button id="submit" type="submit">Join Movie Buff</button>
         </div>
         </div>
+        <form action="/signup" method="POST">
+            <div id="err-message">
+                <% if(message) { %>
+                    <p>* <%= message %></p>
+                <% } %>
     </form>
 </div>        
 </div>
