@@ -1,11 +1,4 @@
-/* styles page */
-body {
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
- }
- 
+/* styles page */ 
  .rating {
     position: relative;
     width: 180px;

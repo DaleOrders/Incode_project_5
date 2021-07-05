@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS ratings;
 
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
   surname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   passwords CHAR(8) NOT NULL
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS ratings (
    rating_id SERIAL PRIMARY KEY,
    movie_id INT NOT NULL,
-   rating CHECK(rating >=0 AND rating <=5),
+   rating INTEGER CHECK(rating >=0 AND rating <=5),
    user_id INT NOT NULL,
    create_at TIMESTAMPTZ,
    update_at TIMESTAMPTZ,
