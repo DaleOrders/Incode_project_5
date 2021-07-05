@@ -1,4 +1,14 @@
 /* styles page */ 
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+/* styles page */
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+ }
+ 
  .rating {
     position: relative;
     width: 180px;
@@ -34,3 +44,115 @@
  .rating__star:hover {
     filter: drop-shadow(1px 1px 4px gold);
  }
+
+
+
+ /* Login Page */
+ .form_container {
+background: black;
+top: 50%;
+left: 50%;
+ width: 492px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    height: 650px;
+ }
+
+#loginlogo {
+   width: auto;
+   height: 95px;
+   margin-bottom: 40px;
+   }
+
+#signin {
+   position: relative;
+   padding-top: 50px;
+   display: flex;
+   flex-direction: column;
+   width: 65%;
+   margin-left: auto;
+text-align: center;
+   margin-right: auto;
+   color: white;
+}
+
+input[type= password] {
+   width: 100%;
+   height: 10px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   border: none;
+   background-color: #C4C4C4;
+   border-radius: 10px;
+
+ }
+
+input[type= email] {
+   width: 100%;
+   height: 10px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   border: none;
+   background-color: #C4C4C4;
+   border-radius: 10px;
+
+ }
+ 
+ input[type= text] {
+   width: 100%;
+   height: 10px;
+   padding: 12px 20px;
+   margin: 8px 0;
+   box-sizing: border-box;
+   border: none;
+   background-color: #C4C4C4;
+   border-radius: 10px;
+
+ }
+
+.sub-button {
+   padding-top: 10px;
+   text-align: center;   
+
+}
+
+#submit {
+   width: 200px;
+   background-color: blue;
+   color: white;
+   border-radius: 10px;
+
+
+}
+
+p {
+   color: white;
+   text-align: center;
+   padding-top: 10px;
+
+}
+.signup {
+   color: blue;
+   
+}
+
+#signup {
+   padding-bottom: 20px;
+
+}
+   
+#bg {
+  height: 95vh;
+
+}
+
+.bg-img {
+background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+
