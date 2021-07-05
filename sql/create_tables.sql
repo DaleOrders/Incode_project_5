@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS ratings (
    rating_id SERIAL PRIMARY KEY,
    movie_id INT NOT NULL,
-   rating CHECK(rating >=0 AND rating <=5),
+   rating INT CHECK (rating >=0 AND rating <=5),
    user_id INT NOT NULL,
    create_at TIMESTAMPTZ,
    update_at TIMESTAMPTZ,
