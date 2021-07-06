@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS ratings (
    movie_id INT NOT NULL,
    rating INTEGER CHECK(rating >=0 AND rating <=5),
    user_id INT NOT NULL,
-   create_at TIMESTAMPTZ,
+   create_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
    update_at TIMESTAMPTZ,
    CONSTRAINT fk_customer
     FOREIGN KEY(user_id) 

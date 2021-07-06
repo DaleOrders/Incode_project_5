@@ -28,7 +28,32 @@ function executeRating(stars, result) {
 
 function printRatingResult(result, num = 0) {
    //result.textContent = `${num}/5`;
-   $.post( "/details", { rating: num} );
+ /*   $.post( "/details", { rating: num} )  
+   .done(function( data ) {
+      alert( "Data Loaded: " + data );
+    }); */
+
+    $.ajax({
+      type: "POST",
+      url: "/details",
+      data: { rating: num},
+      success: function(data) {
+        alert(data.message)
+     },
+      error: function(data) {
+         alert(data.message)
+      },
+      dataType: "json"
+    });
+
+   
+}
+function success(){
+   alert(data.message)
+   
+}
+function error(){
+  //handle error here
 }
 
 executeRating(ratingStars, ratingResult);

@@ -2,14 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
 /* styles page */
+/* body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+ } */
+
 body {
    height: 100vh;
    background-color: black;
   
 }
 
-
- 
  .rating {
     margin-top: 20px;
     position: relative;
