@@ -2,25 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
 /* styles page */
-<<<<<<< HEAD
 /* body {
     height: 100vh;
     display: grid;
     place-items: center;
     overflow: hidden;
  } */
-=======
+
 body {
    height: 100vh;
    background-color: black;
   
 }
->>>>>>> f950cadbb39e7fa2efe2a62c1ba1d1904eab81a2
- 
+
  .rating {
     margin-top: 20px;
     position: relative;
-    width: 90%;
+    width: 95%;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -179,8 +177,7 @@ margin-right: auto;
    height: 50px;
    display: flex;
    justify-content: space-between;
-   background-color: #FFDE59
-   
+   background-color: #FFDE59;
    
  }
  
@@ -196,6 +193,10 @@ margin-right: auto;
 margin-right: 10px;
  }
 
+ #details {
+   display: flex;
+}
+
 #overview {
    margin-top: 30px;
    font-size: 20px;
@@ -203,20 +204,14 @@ margin-right: 10px;
    margin-bottom: 30px;
 }
 
-#poster {
-   position: absolute;
-   text-align: right;
-   width: 100%;
-   height: 20%;
-
-}
 
 #movieinfo {
    margin-left: 30px;
+   margin-bottom: 30px;
    background-color: white;
    padding-left: 30px;
-   width: 55%;
-   height: 800px;
+   width: 60%;
+   height: 700px;
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -226,19 +221,31 @@ margin-right: 10px;
 
 #frame {
    background-color: #CCD1DB;
-   padding: 20px;
+   padding: 10px;
    border-radius: 20px;
 
-
-
 }
-
 
 #movietext {
    padding-top: 20px;
+   text-align: center;
 }
 
 #frame {
-   width: 90%;
-   height: 50%;
+   width: 95%;
+   height: 55%;
+   text-align: center;
 }
+
+#poster div img {
+height: 700px;
+width: 500px;
+border-radius: 20px;
+margin-bottom: 50px;
+margin-left: 100px;
+border: 5px solid white
+
+}
+
+
+
