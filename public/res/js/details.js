@@ -19,7 +19,7 @@ $.getJSON(`${tmdb_base_url}/movie/${movieId}${api_query}&append_to_response=vide
     const genre = data.genres[0].name
     //put content to html page
     $('#genre').text(genre)
-    $('#movieTitle').text(movieTitle+ " (" + d.getFullYear()+")")
+    $('#movietext').text(movieTitle+ " (" + d.getFullYear()+")")
     const posterContent = $("<div>").append(`<img src="${image_url}/${posterImage}">`)
     const overviewContent = $('#overview').text(data.overview)
     $("#poster").append(posterContent)
