@@ -5,9 +5,11 @@ const db = require('../database')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.render('pages/login', {
-        message: req.query.message
+    res.render('pages/login',   {
+        message: req.query.message,   
+        layout:'./layouts/nonav',
     })
+    
 })
 
 router.post('/', (req, res) => {

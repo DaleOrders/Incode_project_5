@@ -7,7 +7,9 @@ const router = express.Router()
 
 router.get('/', (req,res)=>{
     res.render('pages/signup', {
+        layout:'./layouts/nonav',
         message:req.query.message
+        
     })
 })
 
