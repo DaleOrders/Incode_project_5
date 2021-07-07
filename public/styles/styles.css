@@ -2,20 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
 /* styles page */
-<<<<<<< HEAD
 /* body {
     height: 100vh;
     display: grid;
     place-items: center;
     overflow: hidden;
  } */
-=======
-body {
-   height: 100vh;
-   background-color: black;
-  
-}
->>>>>>> f950cadbb39e7fa2efe2a62c1ba1d1904eab81a2
  
  .rating {
     margin-top: 20px;
@@ -90,7 +82,7 @@ left: 50%;
    flex-direction: column;
    width: 65%;
    margin-left: auto;
-text-align: center;
+   text-align: center;
    margin-right: auto;
    color: white;
 }
@@ -241,4 +233,22 @@ margin-right: 10px;
 #frame {
    width: 90%;
    height: 50%;
+}
+
+.search{
+   width:30%;
+   margin-left: 95%;
+   margin-bottom: 80%;
+}
+
+.homepage{
+   background-color: white;
+}
+
+
+.movies{
+   display:flex;
+   flex-wrap: wrap;
+   height:200px;
+   width:200px;
 }
