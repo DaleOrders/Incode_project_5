@@ -6,22 +6,28 @@
 
 
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS ratings;
-
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
   surname VARCHAR(255) NOT NULL,
+  firstname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
-  passwords CHAR(8) NOT NULL
+  passwords VARCHAR(64) NOT NULL
+
 );
 
+
+DROP TABLE IF EXISTS ratings;
 CREATE TABLE IF NOT EXISTS ratings (
    rating_id SERIAL PRIMARY KEY,
    movie_id INT NOT NULL,
+<<<<<<< HEAD
    rating INT CHECK (rating >=0 AND rating <=5),
+=======
+   rating INTEGER CHECK(rating >=0 AND rating <=5),
+>>>>>>> dale
    user_id INT NOT NULL,
-   create_at TIMESTAMPTZ,
+   create_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
    update_at TIMESTAMPTZ,
    CONSTRAINT fk_customer
     FOREIGN KEY(user_id) 
