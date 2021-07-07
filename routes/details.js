@@ -19,7 +19,7 @@ router.get('/:id', (req, res) =>{
 
 router.post("/", (req, res) => {
   const rating = req.body.rating;
-  const movieId = 550; //change later
+  const movieId = req.body.movieId;
   const userId = 1; // change later when session ready
   const obj = {
     message: ""
