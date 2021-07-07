@@ -8,8 +8,6 @@ VALUES ('Denzel', 'Washington', 'd.washington@washington.com', '!DWash1');
 INSERT INTO users (firstname, surname, email, passwords)
 VALUES ('Harrison', 'Ford', 'h.ford@ford.com', '!HFord1');
 INSERT INTO users (firstname, surname, email, passwords)
-VALUES ('Harrison', 'Ford', 'h.ford@ford.com', '!HFord1');
-INSERT INTO users (firstname, surname, email, passwords)
 VALUES ('Sandra', 'Bullock', 's.bullock@bullock.com', '!THanks1');
 INSERT INTO users (firstname, surname, email, passwords)
 VALUES ('Jennifer', 'Lawrence', 'j.lawrence@lawrence.com', '!JLware1');

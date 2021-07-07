@@ -21,6 +21,7 @@ $.getJSON(`${tmdb_base_url}/discover/movie${api_query}`)
                         score+=rating[i]
                     }
                     const average_rate=(score/(rating.length))
+                    return average_rate
                 })
                 .catch((err)=>{
                     console.log(err)
