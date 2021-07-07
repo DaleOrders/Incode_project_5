@@ -12,9 +12,7 @@
 body {
    height: 100vh;
    background-color: black;
-  
 }
-
  .rating {
     margin-top: 20px;
     position: relative;
@@ -221,7 +219,6 @@ margin-right: 10px;
    background-color: #CCD1DB;
    padding: 10px;
    border-radius: 20px;
-
 }
 
 #movietext {
