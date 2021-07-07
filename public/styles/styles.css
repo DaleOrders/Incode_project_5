@@ -15,6 +15,7 @@ body {
 }
  .rating {
     margin-top: 20px;
+    margin-bottom: 20px;
     position: relative;
     width: 95%;
     background: transparent;
@@ -219,6 +220,8 @@ margin-right: 10px;
    background-color: #CCD1DB;
    padding: 10px;
    border-radius: 20px;
+   width: 95%;
+   height: 100%
 }
 
 #movietext {
@@ -226,14 +229,9 @@ margin-right: 10px;
    text-align: center;
 }
 
-#frame {
-   width: 95%;
-   height: 55%;
-   text-align: center;
-}
 
 #poster div img {
-height: 700px;
+height: 705px;
 width: 500px;
 border-radius: 20px;
 margin-bottom: 50px;
