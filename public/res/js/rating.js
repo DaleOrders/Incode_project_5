@@ -29,11 +29,14 @@ function executeRating(stars, result) {
 }
 
 function makeRequest(result, num = 0) {
-
+   const movieId = $('#movieId').val()
     $.ajax({
       type: "POST",
       url: "/details",
-      data: { rating: num},
+      data: { 
+         rating: num,
+         movieId: movieId
+      },
       success: function(data) {
       // send alert message when success   
       $("#alert").removeClass()
