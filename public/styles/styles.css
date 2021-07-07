@@ -2,20 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
 /* styles page */
-<<<<<<< HEAD
-/* body {
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
- } */
-=======
 body {
    height: 100vh;
    background-color: black;
-  
 }
->>>>>>> f950cadbb39e7fa2efe2a62c1ba1d1904eab81a2
  
  .rating {
     margin-top: 20px;
@@ -228,9 +218,6 @@ margin-right: 10px;
    background-color: #CCD1DB;
    padding: 20px;
    border-radius: 20px;
-
-
-
 }
 
 
@@ -241,4 +228,4 @@ margin-right: 10px;
 #frame {
    width: 90%;
    height: 50%;
-}
+} 

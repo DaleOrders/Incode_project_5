@@ -5,55 +5,53 @@ const ratingResult = document.querySelector(".rating__result");
 //printRatingResult(ratingResult);
 
 function executeRating(stars, result) {
+   //get stars
    const starClassActive = "rating__star fas fa-star";
    const starClassUnactive = "rating__star far fa-star";
    const starsLength = stars.length;
    let i;
+   //map and add click event
    stars.map((star) => {
       star.onclick = () => {
+         //get rating and highlight star
          i = stars.indexOf(star);
-         
          if (star.className.indexOf(starClassUnactive) !== -1) {
 
-            printRatingResult(result, i + 1);
+            makeRequest(result, i + 1);
             for (i; i >= 0; --i) stars[i].className = starClassActive;
          } else {
             
-            printRatingResult(result, i);
+            makeRequest(result, i);
             for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
          }
       };
    });
 }
 
-function printRatingResult(result, num = 0) {
-   //result.textContent = `${num}/5`;
- /*   $.post( "/details", { rating: num} )  
-   .done(function( data ) {
-      alert( "Data Loaded: " + data );
-    }); */
+function makeRequest(result, num = 0) {
 
     $.ajax({
       type: "POST",
       url: "/details",
       data: { rating: num},
       success: function(data) {
-        alert(data.message)
+      // send alert message when success   
+      $("#alert").removeClass()
+      $('#alert').addClass("alert alert-success")
+      $('#alert').text(data.message)
+      window.scrollBy(0, -window.innerHeight)
      },
       error: function(data) {
-         alert(data.message)
+      // send alert message when error      
+      $("#alert").removeClass()
+      $('#alert').addClass("alert alert-danger")
+      $('#alert').text(data.message)
+      window.scrollBy(0, -window.innerHeight)   
       },
       dataType: "json"
     });
 
    
-}
-function success(){
-   alert(data.message)
-   
-}
-function error(){
-  //handle error here
 }
 
 executeRating(ratingStars, ratingResult);
