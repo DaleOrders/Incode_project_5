@@ -59,6 +59,11 @@ app.use('/signup', signupRouter)
 const ratingRouter = require('./routes/rating')
 app.use('/rating', ratingRouter)
 
+//test search
+const searchRouter = require('./routes/search')
+app.use('/search', searchRouter)
+
+
 const errorRouter=require('./routes/404')
 app.use('*', errorRouter)
 
