@@ -4,14 +4,14 @@
 -- ❒ The users table contains at least the following fields: ID, email address, password
 -- ❒ The ratings table contains at least the following fields: ID, movie_id (corresponding to the API ID), rating, user_id
 
-
-DROP TABLE IF EXISTS users;
+DROP TABLE if exists users cascade;
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
   firstname VARCHAR(255) NOT NULL,
   surname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   passwords VARCHAR(64) NOT NULL
+
 );
 
 
