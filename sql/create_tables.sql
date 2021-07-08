@@ -21,7 +21,11 @@ DROP TABLE IF EXISTS ratings;
 CREATE TABLE IF NOT EXISTS ratings (
    rating_id SERIAL PRIMARY KEY,
    movie_id INT NOT NULL,
+<<<<<<< HEAD
+   rating INT CHECK (rating >=0 AND rating <=5),
+=======
    rating INTEGER CHECK(rating >=0 AND rating <=5),
+>>>>>>> dale
    user_id INT NOT NULL,
    create_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
    update_at TIMESTAMPTZ,

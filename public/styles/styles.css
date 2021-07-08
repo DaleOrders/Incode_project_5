@@ -8,16 +8,11 @@
     place-items: center;
     overflow: hidden;
  } */
-
-body {
-   height: 100vh;
-   background-color: black;
-}
+ 
  .rating {
     margin-top: 20px;
-    margin-bottom: 20px;
     position: relative;
-    width: 95%;
+    width: 90%;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -87,7 +82,7 @@ left: 50%;
    flex-direction: column;
    width: 65%;
    margin-left: auto;
-text-align: center;
+   text-align: center;
    margin-right: auto;
    color: white;
 }
@@ -160,8 +155,10 @@ p {
 }
    
 #bg {
-   width: 100%;
-  height: 100vh;
+  height: 105vh;
+  padding: 20px;
+margin-left: auto;
+margin-right: auto;
 }
 
 
@@ -174,7 +171,8 @@ p {
    height: 50px;
    display: flex;
    justify-content: space-between;
-   background-color: #FFDE59;
+   background-color: #FFDE59
+   
    
  }
  
@@ -190,10 +188,6 @@ p {
 margin-right: 10px;
  }
 
- #details {
-   display: flex;
-}
-
 #overview {
    margin-top: 30px;
    font-size: 20px;
@@ -201,14 +195,20 @@ margin-right: 10px;
    margin-bottom: 30px;
 }
 
+#poster {
+   position: absolute;
+   text-align: right;
+   width: 100%;
+   height: 20%;
+
+}
 
 #movieinfo {
    margin-left: 30px;
-   margin-bottom: 30px;
    background-color: white;
    padding-left: 30px;
-   width: 60%;
-   height: 700px;
+   width: 55%;
+   height: 800px;
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -218,28 +218,32 @@ margin-right: 10px;
 
 #frame {
    background-color: #CCD1DB;
-   padding: 10px;
+   padding: 20px;
    border-radius: 20px;
-   width: 95%;
-   height: 100%
+
+
+
 }
+
 
 #movietext {
    padding-top: 20px;
-   text-align: center;
 }
 
-
-#poster div img {
-height: 705px;
-width: 500px;
-border-radius: 20px;
-margin-bottom: 50px;
-margin-left: 100px;
-border: 5px solid white
-
+#frame {
+   width: 90%;
+   height: 50%;
 }
 
+.search{
+   width:30%;
+   margin-left: 95%;
+   margin-bottom: 80%;
+}
+
+.homepage{
+   background-color: white;
+}
 
 /* Homepage */
 
