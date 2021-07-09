@@ -47,6 +47,9 @@ app.use(session({
 const detailsRouter=require('./routes/details')
 app.use('/details', detailsRouter)
 
+const averageratingRouter=require('./routes/api/averagerating')
+app.use('/api/averagerating', averageratingRouter)
+
 const loginRouter=require('./routes/login')
 app.use('/login', loginRouter)
 
