@@ -67,7 +67,8 @@ app.use('/search', searchRouter)
 const errorRouter=require('./routes/404')
 app.use('*', errorRouter)
 
-
+const logoutRouter = require('./routes/logout')
+app.use('/logout', logoutRouter)
 
 
 app.listen(port, () => {
