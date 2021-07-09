@@ -9,6 +9,10 @@
     overflow: hidden;
  } */
  
+ body {
+    background-color: black;
+ }
+
  .rating {
     margin-top: 20px;
     position: relative;
@@ -231,24 +235,18 @@ margin-right: 10px;
 }
 
 #frame {
-  
    border-radius: 20px;
    width: 45%;
    margin-left: auto;
    margin-right: auto;
-
+   
 }
 
 
 #movietext {
    padding-top: 20px;
-}
-
-
-.search{
-   width:30%;
-   margin-left: 95%;
-   margin-bottom: 80%;
+   padding-bottom: 20px;
+   text-align: center;
 }
 
 .homepage{
@@ -275,23 +273,21 @@ margin-right: 10px;
 .minibar {
    background-color: grey;
    display: flex;
-   width: 20%;
+   width: 40%;
    justify-content: space-around;
    border-radius: 20px;
    height: 50px;
    padding-top: 10px;
    margin-top: 10px;
-   
+margin-left: 20px;   
 
 
 }
 
 .search {
-   display: flex;
    text-align: center;
-   width: 100%;
-   padding-top: 10px;
-   margin-top: 10px;
+   width: 50%;
+   padding-right: 20px;
 }
 
 .searchbar {
@@ -328,8 +324,6 @@ margin-top: 20px;
    display: flex;
    overflow-x: auto;
    text-align: center;
-
-  
    
 }
 
@@ -387,11 +381,9 @@ margin-top: 20px;
 }
 
  .search input[type= text] {
-   width: 100%;
-   height: 70px;
-   background-color: #C4C4C4;
-   border-radius: 10px;
-
+   height: 50px;
+ 
+   
  }
 
  #texttrailer {
