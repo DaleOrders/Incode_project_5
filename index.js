@@ -51,7 +51,7 @@ const loginRouter=require('./routes/login')
 app.use('/login', loginRouter)
 
 const homepageRouter=require('./routes/homepage')
-app.use('/homepage', homepageRouter)
+app.use('/', homepageRouter)
 
 const signupRouter=require('./routes/signup')
 app.use('/signup', signupRouter)
@@ -59,10 +59,16 @@ app.use('/signup', signupRouter)
 const ratingRouter = require('./routes/rating')
 app.use('/rating', ratingRouter)
 
+//test search
+const searchRouter = require('./routes/search')
+app.use('/search', searchRouter)
+
+
 const errorRouter=require('./routes/404')
 app.use('*', errorRouter)
 
-
+const logoutRouter = require('./routes/logout')
+app.use('/logout', logoutRouter)
 
 
 app.listen(port, () => {
