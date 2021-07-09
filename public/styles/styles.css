@@ -9,6 +9,10 @@
     overflow: hidden;
  } */
  
+ body {
+    background-color: black;
+ }
+
  .rating {
     margin-top: 20px;
     position: relative;
