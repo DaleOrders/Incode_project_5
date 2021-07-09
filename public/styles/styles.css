@@ -8,16 +8,11 @@
     place-items: center;
     overflow: hidden;
  } */
-
-body {
-   height: 100vh;
-   background-color: black;
-}
+ 
  .rating {
     margin-top: 20px;
-    margin-bottom: 20px;
     position: relative;
-    width: 95%;
+    width: 90%;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -87,7 +82,7 @@ left: 50%;
    flex-direction: column;
    width: 65%;
    margin-left: auto;
-text-align: center;
+   text-align: center;
    margin-right: auto;
    color: white;
 }
@@ -160,8 +155,10 @@ p {
 }
    
 #bg {
-   width: 100%;
-  height: 100vh;
+  height: 105vh;
+  padding: 20px;
+margin-left: auto;
+margin-right: auto;
 }
 
 
@@ -174,7 +171,8 @@ p {
    height: 50px;
    display: flex;
    justify-content: space-between;
-   background-color: #FFDE59;
+   background-color: #FFDE59
+   
    
  }
  
@@ -190,10 +188,6 @@ p {
 margin-right: 10px;
  }
 
- #details {
-   display: flex;
-}
-
 #overview {
    margin-top: 30px;
    font-size: 20px;
@@ -201,14 +195,20 @@ margin-right: 10px;
    margin-bottom: 30px;
 }
 
+#poster {
+   position: absolute;
+   text-align: right;
+   width: 100%;
+   height: 20%;
+
+}
 
 #movieinfo {
    margin-left: 30px;
-   margin-bottom: 30px;
    background-color: white;
    padding-left: 30px;
-   width: 60%;
-   height: 700px;
+   width: 55%;
+   height: 800px;
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -218,27 +218,168 @@ margin-right: 10px;
 
 #frame {
    background-color: #CCD1DB;
-   padding: 10px;
+   padding: 20px;
    border-radius: 20px;
-   width: 95%;
-   height: 100%
+
+
+
 }
+
 
 #movietext {
    padding-top: 20px;
+}
+
+#frame {
+   width: 90%;
+   height: 50%;
+}
+
+.search{
+   width:30%;
+   margin-left: 95%;
+   margin-bottom: 80%;
+}
+
+.homepage{
+   background-color: white;
+}
+
+/* Homepage */
+
+#homelogo {
+   display: block;
+   height: 40%;
+   padding: 20px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
+
+.bar {
+   display: flex;
+   justify-content: space-evenly
+   
+}
+
+.minibar {
+   background-color: grey;
+   display: flex;
+   width: 20%;
+   justify-content: space-around;
+   border-radius: 20px;
+   height: 50px;
+   padding-top: 10px;
+   margin-top: 10px;
+   
+
+
+}
+
+.search {
+   display: flex;
    text-align: center;
+   width: 100%;
+   padding-top: 10px;
+   margin-top: 10px;
 }
 
+.searchbar {
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+   justify-content: space-between;
+   background-color: #FFDE59;
+   border-radius: 20px;
+   height: 70px
+   
+}   
 
-#poster div img {
-height: 705px;
-width: 500px;
+.Moviegrid {
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+background-color: grey;
 border-radius: 20px;
-margin-bottom: 50px;
-margin-left: 100px;
-border: 5px solid white
+margin-top: 20px;
+
 
 }
 
+.col {
+   width: 300px;
+   height: 400px;
+   background-color: white;
+   margin: 20px;
+}
 
+.moviecard {
+   display: flex;
+   overflow-x: auto;
+   text-align: center;
 
+  
+   
+}
+
+.row1 {
+   display: flex;
+}
+
+#sicon {
+   height: 100%;
+}
+
+ /* The Modal (background) */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(63, 48, 48); /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-box {
+   color: white;
+   position: relative;
+   background-color: blue;
+   top: 20%;
+   left: 30%;
+   padding: 20px;
+   border: 5px solid white;
+   width: 50%;
+   height: 20%;
+   border-radius: 20px;
+   text-align: center;
+ }
+
+ /* The Close Button */
+.close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+  
+ .close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ .search input[type= text] {
+   width: 100%;
+   height: 70px;
+   background-color: #C4C4C4;
+   border-radius: 10px;
+
+ }
