@@ -61,13 +61,65 @@ $("#genreBtn").click(function () {
 });
 
 let getMovieByGenre = (genre) => {
+  $(".Moviegrid").empty();
+  document.getElementById("genreDropdown").classList.toggle("show");
   let genreId = genre.id
+
+
   $.getJSON(
     `https://api.themoviedb.org/3/discover/movie?api_key=15c2759fb6b0cbc335f8f0632d652dc9&with_genres=${genreId}&sort_by=popularity.desc`,
     function (data) {
+      
+      let rowBreak = 1
+      let startingPoint = 1
       data.results.forEach((genre) => {
-        console.log(genre.original_title)
+        let posterImage = genre.poster_path
+        let movieTitle = genre.original_title
+        const posterContent = $("<div>").append(`<img src="https://image.tmdb.org/t/p/w500/${posterImage}"><div>${movieTitle}</div>`)
+        let content = $('<div class="col">').append(posterContent)
+        
+        
+        if(startingPoint == 9){
+          rowBreak = 2
+        }
+        if(startingPoint == 17){
+          rowBreak = 3
+        }
+        if(rowBreak == 1 )
+        {
+          if(startingPoint == 1){
+            
+            $('.Moviegrid').append('<div id="moviecard1" class="moviecard">')
+            $('#moviecard1').append('<div id="moviecardRow1" class="row1">')
+            $('#moviecardRow1').append(content)
+          }else{
+            $('#moviecardRow1').append(content)
+          } 
+        }
+        if(rowBreak == 2 )
+        {
+          if(startingPoint == 9){
+            $('.Moviegrid').append('<div id="moviecard2" class="moviecard">')
+            $('#moviecard2').append('<div id="moviecardRow2" class="row1">')
+            $('#moviecardRow2').append(content)
+          }else{
+            $('#moviecardRow2').append(content)
+          } 
+        }
+        if(rowBreak == 3 )
+        {
+          if(startingPoint == 17){
+            $('.Moviegrid').append('<div id="moviecard3" class="moviecard">')
+            $('#moviecard3').append('<div id="moviecardRow3" class="row1">')
+            $('#moviecardRow3').append(content)
+          }else{
+            $('#moviecardRow3').append(content)
+          } 
+        }
+      startingPoint ++   
       });
+      
+      
     }
   );
 };

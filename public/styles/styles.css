@@ -445,6 +445,7 @@ margin-top: 20px;
  .dropdown a:hover {background-color: #ddd;}
  
  .show {display: block;}
+ .hide {display: none;}
  .arrow {
    border: solid white;
    border-width: 0 3px 3px 0;
