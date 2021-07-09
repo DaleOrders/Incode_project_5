@@ -352,13 +352,13 @@ margin-top: 20px;
  .modal-box {
    color: white;
    position: relative;
-   background-color: blue;
+   background-color:#009ffd;
    top: 20%;
    left: 30%;
+   height: 200px;
    padding: 20px;
    border: 5px solid white;
    width: 50%;
-   height: 20%;
    border-radius: 20px;
    text-align: center;
  }
