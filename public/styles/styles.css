@@ -38,7 +38,7 @@
  .rating__star {
     font-size: 1.3em;
     cursor: pointer;
-    color: #dabd18b2;
+    color: #ffeb3b;
     transition: filter linear .3s;
  }
  
@@ -168,7 +168,7 @@ margin-right: auto;
 
  .nav {
    width: 100%;
-   height: 50px;
+   height: 55px;
    display: flex;
    justify-content: space-between;
    background-color: #FFDE59
@@ -189,10 +189,12 @@ margin-right: 10px;
  }
 
 #overview {
+   display: flex;
    margin-top: 30px;
    font-size: 20px;
-   width: 90%;
+   width: 50%;
    margin-bottom: 30px;
+   align-items: center;
 }
 
 #poster {
@@ -217,11 +219,11 @@ margin-right: 10px;
 }
 
 #frame {
-   background-color: #CCD1DB;
-   padding: 20px;
+  
    border-radius: 20px;
-
-
+   width: 45%;
+   margin-left: auto;
+   margin-right: auto;
 
 }
 
@@ -383,3 +385,10 @@ margin-top: 20px;
    border-radius: 10px;
 
  }
+
+ #texttrailer {
+    display: flex;
+    height: 500px;
+    text-align: left;
+ }
+
