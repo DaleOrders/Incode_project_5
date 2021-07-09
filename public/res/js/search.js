@@ -79,10 +79,10 @@ let getMovieByGenre = (genre) => {
         let content = $('<div class="col">').append(posterContent)
         
         
-        if(startingPoint == 9){
+        if(startingPoint == 8){
           rowBreak = 2
         }
-        if(startingPoint == 17){
+        if(startingPoint == 15){
           rowBreak = 3
         }
         if(rowBreak == 1 )
@@ -98,7 +98,7 @@ let getMovieByGenre = (genre) => {
         }
         if(rowBreak == 2 )
         {
-          if(startingPoint == 9){
+          if(startingPoint == 8){
             $('.Moviegrid').append('<div id="moviecard2" class="moviecard">')
             $('#moviecard2').append('<div id="moviecardRow2" class="row1">')
             $('#moviecardRow2').append(content)
@@ -108,7 +108,7 @@ let getMovieByGenre = (genre) => {
         }
         if(rowBreak == 3 )
         {
-          if(startingPoint == 17){
+          if(startingPoint == 15){
             $('.Moviegrid').append('<div id="moviecard3" class="moviecard">')
             $('#moviecard3').append('<div id="moviecardRow3" class="row1">')
             $('#moviecardRow3').append(content)

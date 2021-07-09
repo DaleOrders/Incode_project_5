@@ -50,11 +50,10 @@ app.use('/details', detailsRouter)
 const loginRouter=require('./routes/login')
 app.use('/login', loginRouter)
 
-const landingpageRouter=require('./routes/landingpage')
-app.use('/', landingpageRouter)
+
 
 const homepageRouter=require('./routes/homepage')
-app.use('/homepage', homepageRouter)
+app.use('/', homepageRouter)
 
 const signupRouter=require('./routes/signup')
 app.use('/signup', signupRouter)
