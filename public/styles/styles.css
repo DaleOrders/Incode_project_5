@@ -392,3 +392,7 @@ margin-top: 20px;
     text-align: left;
  }
 
+ a {
+    color: black;
+    text-decoration: nonec;
+ }
