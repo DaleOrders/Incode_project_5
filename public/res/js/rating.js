@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
 const ratingStars = [...document.getElementsByClassName("rating__star")];
 const ratingResult = document.querySelector(".rating__result");
 
-//printRatingResult(ratingResult);
-
 function executeRating(stars, result) {
    //get stars
    const starClassActive = "rating__star fas fa-star";
