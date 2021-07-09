@@ -231,17 +231,18 @@ margin-right: 10px;
 }
 
 #frame {
-  
    border-radius: 20px;
    width: 45%;
    margin-left: auto;
    margin-right: auto;
-
+   
 }
 
 
 #movietext {
    padding-top: 20px;
+   padding-bottom: 20px;
+   text-align: center;
 }
 
 
@@ -399,4 +400,3 @@ margin-top: 20px;
     height: 500px;
     text-align: left;
  }
-
