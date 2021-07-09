@@ -1,9 +1,5 @@
 
 
-<script type="module" src="../../database.js"></script>
-
-
-
 const api_key = '78e561bb82b175c2b8721122491f631b'
 const tmdb_base_url = 'https://api.themoviedb.org/3'
 const api_query = `?api_key=${api_key}`

@@ -11,15 +11,17 @@
 
     <div class="minibar">
         <div>
-            <a href="#">Newest</a>
+            <a id="popular" href="#">Popular</a>
         </div>
         <div>
-            <a href="#">Popular</a>
+            <a id="top_rated" href="#">Top Rated</a>
         </div>
         <div>
-            <a href="#">Featured</a>
+            <a id="upcoming" href="#">Upcoming</a>
         </div>
     </div>
+
+
 </div>
 
 
@@ -33,56 +35,18 @@
 
     </div>
 </div>
-</div>
 
 
 
 
 
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
+<section>
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
+    <div class="movies">
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    </div>
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-            <div class ="minibar">
-                <div>
-                    <a href="#">Newest</a>               
-                 </div>
-                <div>
-                    <a href="#">Popular</a>    
-                </div>
-                <div>
-                    <a href="#">Featured</a>    
-                </div>
-        </div>
-      </div>
-        
-
-       
-
-
+</section>
 
 <div class="Moviegrid">
     <div class="moviecard">
@@ -101,24 +65,9 @@
             </div>
             <div class="col">
                 Movie 5
-         <div class="col">
-        Movie 1
-          </div>
-        <div class="col">
-        Movie 2
-        </div>
-        <div class="col">
-        Movie 3
-         </div>
-        <div class="col">
-        Movie 4
-    <div>
-
-    </div>
-        </div>
-        <div class="col">
-            Movie 5
             </div>
+        </div>
+        <div class="row1">
             <div class="col">
                 Movie 6
             </div>
@@ -128,79 +77,49 @@
             <div class="col">
                 Movie 8
             </div>
+            <div class="col">
+                Movie 8
+            </div>
+            <div class="col">
+                Movie 10
+            </div>
         </div>
     </div>
-    <section class="homepage">
-        <div>
+</div>
 
-        </div>
-    </section>
+              
+        <section class="homepage">
+            <div>
 
-    <img id="loginlogo" src="/res/Blue Photo Movie Ticket.png" alt="Movie buff logo">
-    <!-- searchbar -->
-    <div class="container">
-        <div class="row height d-flex justify-content-center align-items-center">
-            <div class="col-md-8">
-                <div class="search"><input type="text" class="form-control" placeholder="I am searching for...."
-                        src="fa fa-search"></div>
-
-
-                <div class="moviecard">
-                    <div class="row1">
-                        <div class="col">
-                            <div class="movies">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        </section>
 
+        <img id="loginlogo" src="/res/Blue Photo Movie Ticket.png" alt="Movie buff logo">
+        <!-- searchbar -->
+        <div class="container">
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <div class="search"><input type="text" class="form-control" placeholder="I am searching for...."
+                            src="fa fa-search"></div>
 
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
 
-            <section>
-                <div class="banner">
-                    <button>
-                        <h1 id="popular">Popular</h1>
-                    </button>
-                    <button>
-                        <h1 id="top_rated">Top Rated</h1>
-                    </button>
-                    <button>
-                        <h1 id="upcoming">Most Recent</h1>
-                    </button>
-                </div>
-            </section>
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
 
-
-            <section>
-
-                <div class="movies">
-
-                </div>
-
-            </section>
-
-
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
-                </div>
-
-                <!-- <section id='genreSelect'>
+                    <!-- <section id='genreSelect'>
                     <h3>Select a Genre:</h3>
                     <select class="search-select" id="genreHomeFilter">
                         <option value="0">All Genres</option>
                     </select>
                 </section> --> -->
-                <div class="col">
-                    Movie 8
+                    <div class="col">
+                        Movie 8
                     </div>
-    </div>
-  </div>
-</div>
+                </div>
+            </div>
+        </div>
