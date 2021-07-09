@@ -4,7 +4,8 @@ const db = require("../database");
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('pages/homepage',   {
+    res.render('pages/landingpage', {
+    layout:'./layouts/nonav',
 
     })
 })
@@ -18,3 +19,4 @@ router.get('/', (req,res)=>{
 
 
 module.exports = router
+
