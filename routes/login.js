@@ -4,16 +4,18 @@ const express = require('express')
 const db = require('../database')
 const router = express.Router()
 const bcrypt = require('bcrypt');
+const{ redirectToHome } = require('../middleware')
 
-router.get('/', (req, res) => {
+router.get('/', redirectToHome, (req, res) => {
     res.render('pages/login',   {
         message: req.query.message,   
         layout:'./layouts/nonav',
+        documentTitle: "Login"
     })
     
 })
 
-router.post('/', (req, res) => {
+router.post('/', redirectToHome, (req, res) => {
     const email = req.body.email
     const password = req.body.password
 
