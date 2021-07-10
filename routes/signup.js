@@ -7,8 +7,18 @@ const router = express.Router()
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+// middleware for users that are already logged in
+const loggedInMessage = (req, res, next) => {
+    if (req.session.userId) {
+        res.render('pages/signup', {
+            message: req.query.message ? req.query.message : "You are already logged in"
+        })
+    } else {
+        next()
+    }
+}
 
-router.get('/', (req,res)=>{
+router.get('/', loggedInMessage, (req,res)=>{
     res.render('pages/signup', {
         layout:'./layouts/nonav',
         message:req.query.message,
