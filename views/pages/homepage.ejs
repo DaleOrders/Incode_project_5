@@ -1,143 +1,42 @@
 <!-- homepage -->
-
-<img id="homelogo" src="/res/Blue Photo Movie Ticket.png" alt="Movie buff logo">
-
-
-<!-- searchbar -->
-<div class="searchbar">
+<script src="/res/js/search.js" defer></script>
+<img id="homelogo" src="/res/Blue Photo Movie Ticket.png" alt="Movie buff logo" >
 
 
-    <button id="myBtn"> <img id="sicon" src="/res/search.png" alt="Movie buff logo"> </button>
-
-    <div class="minibar">
-        <div>
-            <a id="popular" href="#">Popular</a>
+    <!-- searchbar -->
+    <div class="searchbar">      
+      <div class ="minibar">
+                <div>
+                    <a href="#">Newest</a>               
+                 </div>
+                <div>
+                    <a href="#">Popular</a>    
+                </div>
+                <div>
+                    <a href="#">Featured</a>    
+                </div>
         </div>
+        <div class ="search">
+          <input type="text" placeholder="I am searching for..." id="findMovie">
+        </div> 
         <div>
-            <a id="top_rated" href="#">Top Rated</a>
-        </div>
-        <div>
-            <a id="upcoming" href="#">Upcoming</a>
-        </div>
-    </div>
-
-
-</div>
-
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-box">
-        <span class="close">&times;</span>
-        <h3>Type movie to find it</h3>
-        <div class="search"> </i> <input type="text" class="form-control" placeholder="Search here"> </div>
-
-    </div>
-</div>
-
-
-
-
-
-<section>
-
-    <div class="movies">
-
-    </div>
-
-</section>
-<!-- searchbar -->
-<div class="searchbar">
-    <div class="minibar">
-        <div>
-            <a href="#">Newest</a>
-        </div>
-        <div>
-            <a href="#">Popular</a>
-        </div>
-        <div>
-            <a href="#">Featured</a>
-        </div>
-    </div>
-    <div class="search">
-        <input type="text" placeholder="I am searching for..." id="findMovie">
-    </div>
-</div>
-
+       </div>
+        <div class="dropdown">
+          <button id="genreBtn" class="dropbtn">Genre <i class="arrow down"></i></button>
+          <div id="genreDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="genreSearch">
+          </div>
+        </div> 
+      </div>
+      
 
 <div class="Moviegrid">
     <div class="moviecard">
-        <div class="row1">
-            <div class="col">
-                Movie 1
-            </div>
-            <div class="col">
-                Movie 2
-            </div>
-            <div class="col">
-                Movie 3
-            </div>
-            <div class="col">
-                Movie 4
-            </div>
-            <div class="col">
-                Movie 5
-            </div>
-        </div>
-        <div class="row1">
-            <div class="col">
-                Movie 6
-            </div>
-            <div class="col">
-                Movie 7
-            </div>
-            <div class="col">
-                Movie 8
-            </div>
-            <div class="col">
-                Movie 8
-            </div>
-            <div class="col">
-                Movie 10
-            </div>
-        </div>
-    </div>
+      <!-- <div class="row1">
+         <div class="col">
+
+          </div>
+      </div> -->
+      
+  </div>
 </div>
-
-
-<section class="homepage">
-    <div>
-
-    </div>
-</section>
-
-<img id="loginlogo" src="/res/Blue Photo Movie Ticket.png" alt="Movie buff logo">
-<!-- searchbar -->
-<div class="container">
-    <div class="row height d-flex justify-content-center align-items-center">
-        <div class="col-md-8">
-            <div class="search"><input type="text" class="form-control" placeholder="I am searching for...."
-                    src="fa fa-search"></div>
-
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
-                </div>
-
-                <!-- <section id='genreSelect'>
-                    <h3>Select a Genre:</h3>
-                    <select class="search-select" id="genreHomeFilter">
-                        <option value="0">All Genres</option>
-                    </select>
-                </section> --> -->
-                <div class="col">
-                    Movie 8
-                </div>
-            </div>
-        </div>
-    </div>
