@@ -8,7 +8,9 @@ router.get('/', (req,res)=>{
     db.any(query)
         .then(result=>{
             console.log(result)
-            res.send(result)
+            res.render('pages/homepage', {
+                rating: result.avgRating
+            })
         })
 
         .catch(err=>{
