@@ -56,9 +56,11 @@ body {
   top: 50%;
   left: 50%;
   width: 492px;
-  position: fixed;
   transform: translate(-50%, -50%);
-  height: 650px;
+  height: 750px;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
 }
 
 #loginlogo {
@@ -91,7 +93,7 @@ body {
 
 input[type="password"] {
   width: 100%;
-  height: 10px;
+  height: 40px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -102,7 +104,7 @@ input[type="password"] {
 
 input[type="email"] {
   width: 100%;
-  height: 10px;
+  height: 40px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -113,7 +115,7 @@ input[type="email"] {
 
 input[type="text"] {
   width: 100%;
-  height: 10px;
+  height: 40px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -129,6 +131,7 @@ input[type="text"] {
 
 #submit {
   width: 200px;
+  height: 40px;
   background-color: blue;
   color: white;
   border-radius: 10px;
@@ -148,10 +151,13 @@ p {
 }
 
 #bg {
-  height: 105vh;
+  height: 1000px;
+  width: 1645px;
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
+  position: relative;
 }
 
 /* nav bar */
@@ -167,6 +173,13 @@ p {
 .nav > div {
   margin: 10px;
   font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#nav-links a {
+  color: black;
+  text-decoration: none;
 }
 
 button {
@@ -248,7 +261,7 @@ button {
 }
 
 .minibar {
-  background-color: #009ffd;
+  background-image: linear-gradient(to top, #48c6ef 0%, #4268f5 100%);
   display: flex;
   width: 20%;
   justify-content: space-around;
@@ -258,6 +271,11 @@ button {
   margin-top: 10px;
   margin-left: 20px;
   color: white;
+}
+
+.minibar a {
+  color: white;
+  text-decoration: none;
 }
 
 .search {
@@ -281,6 +299,10 @@ button {
   width: 80px;
 }
 
+#findMovie {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
 .Moviegrid {
   width: 90%;
   margin-left: auto;
@@ -297,7 +319,7 @@ button {
 }
 
 .col div img {
-  height: 370px;
+  height: 270px;
   border-radius: 20px;
   border: 15px;
 }
@@ -419,7 +441,7 @@ button {
 
 /* CSS for dropdown genre */
 .dropbtn {
-  background-color: #009ffd;
+  background-image: linear-gradient(to top, #48c6ef 0%, #4268f5 100%);
   color: white;
   padding: 16px;
   font-size: 16px;
