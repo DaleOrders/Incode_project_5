@@ -14,7 +14,7 @@ $.getJSON(`${tmdb_base_url}/discover/movie${api_query}`)
     .then(data => {
         $('.movies').empty()
         data.results.forEach(movie => {
-            db.any('SELECT rating FROM ratings WHERE movie_id=$1;', movie.id)
+            $.getJSON('../views/homepage')
                 .then((rating)=>{
                     const score=0
                     for(let i=0; i<rating.length;i++){
