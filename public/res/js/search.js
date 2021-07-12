@@ -12,7 +12,6 @@ $(function () {
             term: request.term,
           },
           success: function (data) {
-            console.log(data);
             var transformed = data.results.map(function (movie) {
               return {
                 title: movie.original_title,
@@ -60,24 +59,49 @@ $("#genreBtn").click(function () {
   document.getElementById("genreDropdown").classList.toggle("show");
 });
 
-let getMovieByGenre = (genre) => {
+let getMovieByGenre =  async (genre) => {
   $(".Moviegrid").empty();
   document.getElementById("genreDropdown").classList.toggle("show");
   let genreId = genre.id
 
 
-  $.getJSON(
+   $.getJSON(
     `https://api.themoviedb.org/3/discover/movie?api_key=15c2759fb6b0cbc335f8f0632d652dc9&with_genres=${genreId}&sort_by=popularity.desc`,
-    function (data) {
+     function (data) {
       
       let rowBreak = 1
       let startingPoint = 1
       data.results.forEach((genre) => {
+        let movieScore = 0
+        let movieId = genre.id
+        let dataFromServer = getScoreById(movieId)
+        var addMovieGrid = dataFromServer.then(function(result) {
+           let ratingStars = ""
+           movieScore = result
+        console.log(movieScore)
+        for(let i=0;i<5;i++){
+          
+          if(movieScore >= 1){
+            
+            ratingStars += '<i class="rating__star fas fa-star"></i>'
+            movieScore-- 
+          }else if (movieScore >0 && movieScore <1){
+            
+            ratingStars += '<i class="rating__star fas fa-star-half-alt "></i>'
+            movieScore-- 
+          }else{
+            
+            ratingStars += '<i class="rating__star far fa-star"></i>'
+            movieScore--
+            
+          }
+        }
+        let  starsDiv = $('<div class="rating">').append(ratingStars)
         let posterImage = genre.poster_path
         let movieTitle = genre.original_title
-        const posterContent = $("<div>").append(`<img src="https://image.tmdb.org/t/p/w500/${posterImage}"><div>${movieTitle}</div>`)
+        const posterContent = $("<div>").append(`<img src="https://image.tmdb.org/t/p/w500/${posterImage}"><div>${movieTitle}</div><h4>Community rating:</h4>`)
+        posterContent.append(starsDiv)
         let content = $('<div class="col">').append(posterContent)
-        
         
         if(startingPoint == 8){
           rowBreak = 2
@@ -116,7 +140,8 @@ let getMovieByGenre = (genre) => {
             $('#moviecardRow3').append(content)
           } 
         }
-      startingPoint ++   
+      startingPoint ++ 
+       });
       });
       
       
@@ -140,3 +165,27 @@ $("#genreSearch").keyup(function () {
     }
   }
 });
+
+async function getScoreById(movieId){
+  let data = await fromServer(movieId);
+  return data.avgScore
+}
+function fromServer(movieId){
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      type: "GET",
+      url: "/get-star",
+      data: { 
+         movieId: movieId
+      },
+      success: function(data) {
+        //movieScore = data.avgScore
+        resolve(data)
+     },
+      error: function(data) {
+      console.log("Error")  
+      },
+      dataType: "json"
+    });
+  })
+}
