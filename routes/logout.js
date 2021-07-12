@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-//const{ redirectToLogin } = require('../middleware')
+const{ redirectToLogout } = require('../middleware')
 
-router.get('/', (req, res) => {
+router.get('/', redirectToLogout, (req, res) => {
     res.clearCookie('movie_db')
     req.session.destroy(function(err) {
         if (err) {
