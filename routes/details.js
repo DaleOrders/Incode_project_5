@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
             })
             .catch((err) => {
               console.log(err)
-              obj['message'] = "fail to update."
+              obj['message'] = "Error !!! Please try again."
               return res.send(JSON.stringify(obj));
             });
 
@@ -52,11 +52,11 @@ router.post("/", (req, res) => {
           [movieId, rating, userId]
         )
           .then((data) => {
-            obj['message'] = "successfully added."
+            obj['message'] = "successfully rated this movie."
             return res.send(JSON.stringify(obj));
           })
           .catch((err) => {
-            obj['message'] = "fail to add."
+            obj['message'] = "Error !!! Please try again."
             return res.send(JSON.stringify(obj));
           });
       }
