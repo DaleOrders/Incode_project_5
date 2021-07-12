@@ -18,10 +18,6 @@ router.get('/', (req,res)=>{
         })
 })
 
-router.get('/', (req, res) => {
-    res.render('pages/homepage')
-})
-
 
 module.exports = router;
 

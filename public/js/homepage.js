@@ -12,7 +12,11 @@ const upcoming=document.getElementById('upcoming')
 popular.addEventListener("click", function(){ 
 $.getJSON(`${tmdb_base_url}/discover/movie${api_query}`)
     .then(data => {
+<<<<<<< HEAD
         $('.movies').empty()
+=======
+        $(".movies").empty()
+>>>>>>> cbf74fb6c497bb5b74841c92cc9c5676b6a25aa8
         data.results.forEach(movie => {
             $.getJSON('../views/homepage')
                 .then((rating)=>{
@@ -45,7 +49,11 @@ top_rated.addEventListener("click", function(){
 
     $.getJSON(`${tmdb_base_url}/movie/top_rated${api_query}`)
         .then(data => {
+<<<<<<< HEAD
             $('.movies').empty()
+=======
+            $(".movies").empty()
+>>>>>>> cbf74fb6c497bb5b74841c92cc9c5676b6a25aa8
             data.results.forEach(movie => {
                 const posterImage = movie.poster_path
                 const title = movie.title
@@ -65,7 +73,11 @@ upcoming.addEventListener("click", function(){
 
     $.getJSON(`${tmdb_base_url}/movie/latest${api_query}`)
         .then(data => {
+<<<<<<< HEAD
             $('.movies').empty()
+=======
+            $(".movies").empty()
+>>>>>>> cbf74fb6c497bb5b74841c92cc9c5676b6a25aa8
             data.results.forEach(movie => {
                 const posterImage = movie.poster_path
                 const title = movie.title
