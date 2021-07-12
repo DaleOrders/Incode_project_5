@@ -49,7 +49,9 @@ router.get('/get-star', (req, res) => {
 
 module.exports = router;
 router.get('/', (req,res)=>{
-    res.render('pages/homepage')
+    res.render('pages/homepage', {
+        rating:rating
+    })
 })
 
 

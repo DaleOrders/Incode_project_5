@@ -9,7 +9,7 @@
     "seed-table": "psql -U postgres -h localhost -d project5 -f sql/seed_tables.sql",
     "dev": "nodemon -r dotenv/config index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node -r dotenv/config index.js"
   },
   "author": "",
   "license": "MIT",
@@ -30,4 +30,5 @@
   "devDependencies": {
     "nodemon": "^2.0.7"
   }
+
 }
