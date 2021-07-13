@@ -3,7 +3,8 @@ const router = express.Router()
 
 router.get('/', (req,res)=>{
     res.status(404).render('pages/404', {
-        errorTitle: 'Oops, nothing here...'
+        errorTitle: 'Oops, nothing here...',
+        userId : req.session.userId
     })
 })
 

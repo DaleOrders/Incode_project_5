@@ -4,15 +4,12 @@ const express = require("express");
 const db = require("../database");
 const router = express.Router();
 
-/* router.get("/", (req, res) => {
-  res.render("pages/details", {
-    message: req.query.message,
-  });
-}); */
+
 router.get('/:id', (req, res) =>{
-    console.log(req.params.id)
+    
     res.render("pages/details", {
-        movieId: req.params.id
+        movieId: req.params.id,
+        userId : req.session.userId
       });
 })
 

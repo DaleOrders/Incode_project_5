@@ -1,21 +1,26 @@
+<script src="/res/js/username.js" defer></script>
 <div class="nav">
+  <% if(userId) { %>
   <div>
       <!--  logged in nav -->
-
-    <img id=icon src="/res/Loggedinicon.png" alt="">
-    Watch you watchin<!-- name -->?
-
+    <div id="userName"><img id=icon src="/res/Loggedinicon.png" alt=""></div>
+    
   </div>
   <div id="nav-links">
     <a href="/"><img id=icon src="/res/homeicon.png" alt="">Home</a>
-    <a href="/"><img id=icon src="/res/logouticon.png" alt="">Logout </a>
-
-    <!-- no logged in nav -->
-    <a href="/signup"><img id=icon src="/res/Loggedinicon.png" alt="">Login </a>
-
-    <a href="/login"><img id=icon src="/res/signup.png" alt="">Sign Up </a>
-
+    <a href="/logout"><img id=icon src="/res/logouticon.png" alt="">Logout </a>
     </div>
 </div>
+<% } else { %>
+  <div id="nav-links">
+     <!-- no logged in nav -->
+     <a href="/login"><img id=icon src="/res/Loggedinicon.png" alt="">Login </a>
 
-  c
+     <a href="/signup"><img id=icon src="/res/signup.png" alt="">Sign Up </a>
+    </div>
+
+    <% } %>
+    
+</div>
+
+
