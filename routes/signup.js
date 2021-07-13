@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
                 db.none('INSERT INTO users(firstname, surname, email, passwords) VALUES ($1, $2, $3, $4);', [name, surname, email, newUser.password])
                 .then(()=>{
                     console.log('User successfully created')
-                    res.redirect('/login')
+                    res.render('pages/login')
                 })
                 .catch((err)=>{
                     console.log(err)
