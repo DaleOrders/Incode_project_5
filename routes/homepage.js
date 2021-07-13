@@ -4,15 +4,38 @@ const db = require("../database");
 const router = express.Router();
 
 router.get('/', (req, res) => {
+    
     res.render('pages/homepage',   {
-
+      userId : req.session.userId
     })
+})
+router.get('/get-name', (req, res) => {
+    
+  const obj = {
+    userName: ""
+  }
+  if(req.session.userId){
+      db.one(
+        "select firstname from users where id = $1",
+        [req.session.userId]
+      )
+        .then((data) => {
+        
+          obj['userName'] = data.firstname
+          return res.send(JSON.stringify(obj));
+        })
+        .catch((err) => {
+            //handle error
+            console.log(err)
+        });
+      }else{
+        return res.send(JSON.stringify(obj));
+      }
 })
 
 router.get('/get-star', (req, res) => {
    
     const movieId = req.query.movieId;
-    console.log(movieId)
     const obj = {
         avgScore: 0
       }
@@ -46,15 +69,5 @@ router.get('/get-star', (req, res) => {
     });
     
 })
-
-module.exports = router;
-router.get('/', (req,res)=>{
-    res.render('pages/homepage', {
-        rating:rating
-    })
-})
-
-
-
 
 module.exports = router

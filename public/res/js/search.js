@@ -78,7 +78,7 @@ let getMovieByGenre =  async (genre) => {
         var addMovieGrid = dataFromServer.then(function(result) {
            let ratingStars = ""
            movieScore = result
-        console.log(movieScore)
+        
         for(let i=0;i<5;i++){
           
           if(movieScore >= 1){
@@ -99,7 +99,7 @@ let getMovieByGenre =  async (genre) => {
         let  starsDiv = $('<div class="rating">').append(ratingStars)
         let posterImage = genre.poster_path
         let movieTitle = genre.original_title
-        const posterContent = $("<div>").append(`<img src="https://image.tmdb.org/t/p/w500/${posterImage}"><div>${movieTitle}</div><h4>Community rating:</h4>`)
+        const posterContent = $("<div>").append(`<a href="/details/${movieId}"><img src="https://image.tmdb.org/t/p/w500/${posterImage}"></a><div>${movieTitle}</div><h4>Community rating:</h4>`)
         posterContent.append(starsDiv)
         let content = $('<div class="col">').append(posterContent)
         
